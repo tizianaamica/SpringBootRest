@@ -1,5 +1,6 @@
 package com.application.rest.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 import jakarta.persistence.Id;
@@ -29,6 +30,7 @@ public class Product {
 
     @ManyToOne
     @JoinColumn(name = "maker_id", nullable = false)
+    @JsonIgnore
     private Maker maker;
 
 }
